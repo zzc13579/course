@@ -44,11 +44,11 @@ public class Chapter implements Serializable {
     @ApiModelProperty(value = "显示排序")
     private Integer sort;
 
-    @ApiModelProperty(value = "创建时间")
+    @ApiModelProperty(value = "创建时间",example = "2020-01-01 8:00:00")
     @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
 
-    @ApiModelProperty(value = "更新时间")
+    @ApiModelProperty(value = "更新时间",example = "2020-01-01 8:00:00")
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtModified;
 
