@@ -2,6 +2,7 @@ package com.course.edu.service;
 
 import com.course.edu.entity.Subject;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface SubjectService extends IService<Subject> {
 
+    void batchImport(MultipartFile file, SubjectService subjectService);
 }
