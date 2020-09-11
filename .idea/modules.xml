@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/course.iml" filepath="$PROJECT_DIR$/.idea/course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-framework-common/course-framework-common.iml" filepath="$PROJECT_DIR$/course-framework-common/course-framework-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-framework-parent/course-framework-parent.iml" filepath="$PROJECT_DIR$/course-framework-parent/course-framework-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-microservice-edu/course-microservice-edu.iml" filepath="$PROJECT_DIR$/course-microservice-edu/course-microservice-edu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-microservice-oss/course-microservice-oss.iml" filepath="$PROJECT_DIR$/course-microservice-oss/course-microservice-oss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-microservice-sysuser/course-microservice-sysuser.iml" filepath="$PROJECT_DIR$/course-microservice-sysuser/course-microservice-sysuser.iml" />
+    </modules>
+  </component>
+</project>
