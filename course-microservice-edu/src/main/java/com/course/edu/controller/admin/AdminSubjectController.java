@@ -2,12 +2,15 @@ package com.course.edu.controller.admin;
 
 import com.course.common.vo.R;
 import com.course.edu.service.SubjectService;
+import com.course.edu.vo.SubjectNestedVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 /**
  * @auther shanhen
@@ -30,5 +33,12 @@ public class AdminSubjectController {
             ){
             subjectService.batchImport(file,subjectService);
             return R.ok();
+    }
+
+    @ApiOperation(value = "嵌套数据")
+    @GetMapping()
+    public R nestedList(){
+        List<SubjectNestedVo> subjectNestedList =  subjectService.nestedList();
+        return R.ok().data("item",subjectNestedList);
     }
 }

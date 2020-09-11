@@ -2,7 +2,10 @@ package com.course.edu.service;
 
 import com.course.edu.entity.Subject;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.course.edu.vo.SubjectNestedVo;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 /**
  * <p>
@@ -15,4 +18,6 @@ import org.springframework.web.multipart.MultipartFile;
 public interface SubjectService extends IService<Subject> {
 
     void batchImport(MultipartFile file, SubjectService subjectService);
+
+    List<SubjectNestedVo> nestedList();
 }
