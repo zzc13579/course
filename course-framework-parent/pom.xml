@@ -6,6 +6,7 @@
         <module>../course-microservice-edu</module>
         <module>../course-microservice-sysuser</module>
         <module>../course-microservice-oss</module>
+        <module>../course-microservice-vod</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

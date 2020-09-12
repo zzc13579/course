@@ -3,6 +3,7 @@ package com.course.edu.controller.admin;
 import com.course.common.vo.R;
 import com.course.edu.service.CourseService;
 import com.course.edu.vo.CourseInfoForm;
+import com.course.edu.vo.CoursePublishVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -59,6 +60,26 @@ public class AdminCourseController {
             @RequestBody CourseInfoForm courseInfoForm
     ){
         courseService.updateCourseInfoById(courseInfoForm);
+        return R.ok();
+    }
+
+    @ApiOperation(value = "根据获取ID课程发布信息")
+    @GetMapping("course-publish-info/{id}")
+    public R getCoursePublishVoById(
+            @ApiParam(name = "id", value = "课程ID",required = true)
+            @PathVariable String id
+    ){
+        CoursePublishVo coursePublishVoById = courseService.getCoursePublishVoById(id);
+        return R.ok().data("item",coursePublishVoById);
+    }
+
+    @ApiOperation(value = "根据id发布课程")
+    @PutMapping("publish-course/{id}")
+    public R publishCourseById(
+            @ApiParam(name = "id", value = "课程ID", required = true)
+            @PathVariable String id){
+
+        courseService.publishCourseById(id);
         return R.ok();
     }
 }

@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/course-microservice-edu/course-microservice-edu.iml" filepath="$PROJECT_DIR$/course-microservice-edu/course-microservice-edu.iml" />
       <module fileurl="file://$PROJECT_DIR$/course-microservice-oss/course-microservice-oss.iml" filepath="$PROJECT_DIR$/course-microservice-oss/course-microservice-oss.iml" />
       <module fileurl="file://$PROJECT_DIR$/course-microservice-sysuser/course-microservice-sysuser.iml" filepath="$PROJECT_DIR$/course-microservice-sysuser/course-microservice-sysuser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-microservice-vod/course-microservice-vod.iml" filepath="$PROJECT_DIR$/course-microservice-vod/course-microservice-vod.iml" />
     </modules>
   </component>
 </project>

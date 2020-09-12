@@ -14,6 +14,7 @@ import com.course.edu.service.CourseDescriptionService;
 import com.course.edu.service.CourseService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.course.edu.vo.CourseInfoForm;
+import com.course.edu.vo.CoursePublishVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -99,5 +100,18 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         chapterMapper.deleteById(chapterQueryWrapper);
 
         baseMapper.deleteById(id);
+    }
+
+    @Override
+    public CoursePublishVo getCoursePublishVoById(String id) {
+        return baseMapper.selectCoursePublishVoById(id);
+    }
+
+    @Override
+    public void publishCourseById(String id) {
+        Course course = new Course();
+        course.setStatus(Course.COURSE_NORMAL);
+        course.setId(id);
+        baseMapper.updateById(course);
     }
 }

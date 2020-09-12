@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="course-framework-common" />
         <module name="course-microservice-sysuser" />
+        <module name="course-microservice-vod" />
         <module name="course-microservice-edu" />
         <module name="course-microservice-oss" />
       </profile>
@@ -18,6 +19,7 @@
       <module name="course-microservice-edu" target="1.8" />
       <module name="course-microservice-oss" target="1.8" />
       <module name="course-microservice-sysuser" target="1.8" />
+      <module name="course-microservice-vod" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,6 +28,7 @@
       <module name="course-microservice-edu" options="-parameters" />
       <module name="course-microservice-oss" options="-parameters" />
       <module name="course-microservice-sysuser" options="-parameters" />
+      <module name="course-microservice-vod" options="-parameters" />
     </option>
   </component>
 </project>
