@@ -32,7 +32,7 @@ public class AdminSubjectController {
             @RequestParam("file") MultipartFile file
             ){
             subjectService.batchImport(file,subjectService);
-            return R.ok();
+            return R.ok().message("文件上传成功");
     }
 
     @ApiOperation(value = "嵌套数据")

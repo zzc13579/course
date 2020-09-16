@@ -30,7 +30,7 @@ public class FileController {
             @ApiParam(name = "file", value = "文件", required = true)
             @RequestParam("file") MultipartFile file,
             @ApiParam(name = "host",value = "文件路径",required = false)
-            @RequestParam("host") String host
+            @RequestParam(value = "host", required = false) String host
             ){
 
         if(!StringUtils.isEmpty(host)){

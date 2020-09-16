@@ -65,15 +65,15 @@ public class videoController {
     }
 
     @ApiOperation(value = "获取视频地址凭证")
-    @GetMapping("get-upload-auth-and-address-/{title}/{fileName}")
+    @GetMapping("get-upload-auth-and-address/{title}/{fileName}")
     public R getUploadAuthAndAddress(
             @ApiParam(name = "title", value = "视频标题", required = true)
             @PathVariable String title,
             @ApiParam(name = "fileName", value = "视频文件名", required = true)
             @PathVariable String fileName
     ){
-        CreateUploadVideoResponse uploadAuthAndAddress = videoService.getUploadAuthAndAddress(title, fileName);
-        return R.ok().message("获取视频上传地址和凭证成功").data("uploadAuthAndAddress",uploadAuthAndAddress);
+        CreateUploadVideoResponse response = videoService.getUploadAuthAndAddress(title, fileName);
+        return R.ok().message("获取视频上传地址和凭证成功").data("response",response);
     }
 
     @ApiOperation(value = "刷新视频地址凭证")
